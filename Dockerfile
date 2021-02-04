@@ -9,7 +9,7 @@ COPY . ./
 # 使用交叉编译， 这一层除非代码一点没动， 否则不可能使用缓存
 RUN CGO_ENABLED=0 go build -o app *.go
 
-FROM registry.cn-hangzhou.aliyuncs.com/will_default/alpine-shanghai:1.0
+FROM registry.cn-hangzhou.aliyuncs.com/will_default/alpine-shanghai:2.0
 COPY --from=builder /builder/app .
 
 CMD ["/app"]
