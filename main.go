@@ -12,7 +12,7 @@ import (
 )
 
 type defaultConfig struct {
-	ServerAddress string `default:"localhost:80"`
+	ServerAddress string `default:":80"`
 	IpAddress     string `default:"ipip-grpc:80"`
 }
 
